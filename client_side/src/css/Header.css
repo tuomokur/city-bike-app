@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    align-items: center;
+    margin: 3em 0 1.5em 0;
+    gap: 1em;
+}
+.logo {
+    color: rgba(0, 0, 0, 0.478);
+    font-size: 2.5em;
+}
+.searchInput {
+    height: 38px;
+    padding: 0 30px;
+    color: rgb(34, 34, 34);
+    text-align: center;
+    font-size: 13px;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 15px 0 0 15px ;
+    border: 1px solid rgb(62, 62, 62);
+    box-sizing: border-box; 
+}
+.journeyButton {
+    border-radius: 0px;
+}
+.stationButton {
+    border-radius: 0 15px 15px 0;
+
+}
