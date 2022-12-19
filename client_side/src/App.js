@@ -1,10 +1,15 @@
 import './App.css';
+import ContentArea from './components/ContentArea';
+import Header from './components/Header';
+import Pagination from './components/Pagination';
 
 function App() {
   return (
-    <div>
-      Hello
-    </div>
+    <>
+      <Header/>
+      <Pagination/>
+      <ContentArea/>
+    </>
   );
 }
 
