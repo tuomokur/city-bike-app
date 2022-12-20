@@ -6,7 +6,7 @@ header {
 }
 .logo {
     color: rgba(0, 0, 0, 0.478);
-    font-size: 2.5em;
+    font-weight: 600;
 }
 .searchInput {
     height: 38px;
@@ -20,7 +20,7 @@ header {
     white-space: nowrap;
     background-color: transparent;
     border-radius: 15px 0 0 15px ;
-    border: 1px solid rgb(62, 62, 62);
+    border: 1px solid rgb(69, 69, 69);
     box-sizing: border-box; 
 }
 .journeyButton {

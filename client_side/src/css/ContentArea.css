@@ -1,0 +1,9 @@
+.tableContainer {
+    background-color: rgba(93, 123, 145, 0.103);
+    padding: 3em;
+    border-radius: 10px;
+}
+.tableTitle {
+    font-size: 1.6em;
+    color: rgb(97, 8, 180);
+}

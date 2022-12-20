@@ -1,0 +1,19 @@
+a {
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    color: rgb(39, 75, 104);
+}
+a:active {
+    background-color: rgba(226, 234, 234, 0.632);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+a:hover {
+    background-color: rgba(226, 234, 234, 0.632);
+    color: rgb(0, 0, 0);    
+    border-radius: 5px;
+}
+.pagination {
+    margin-bottom: 2em;
+}
