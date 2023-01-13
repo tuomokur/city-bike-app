@@ -1,34 +1,43 @@
-
+import {useState} from 'react';
+import Papa from 'papaparse';
+import journeys05 from '../data/2021-05.csv';
 
 const Journeys = () => {
 
+    const [journeys, setJourneys] = useState();
+
+    Papa.parse(journeys05, {
+        download: true,
+        complete: results => {
+            // console.log(results.data.slice(1, 10));
+            setJourneys(results.data.slice(1, 11).map((item) => {
+                return (
+                    <tr>
+                        <td>{item[3]}</td>
+                        <td>{item[5]}</td>
+                        <td>{item[6]}</td>
+                        <td>{item[7]}</td>
+                    </tr>
+                )
+            } ))
+        }
+    })
+
   return (
-            // TEMPORARY PLACEHOLDER TABLE DATA !!!
     <>
         <div className="tableContainer">
         <h2 className='tableTitle'>Bike Journeys</h2>
         <table>
             <thead>
             <tr>
-                <th></th>
+                <th>Departure station</th>
                 <th>Return station</th>
                 <th>Distance(km)</th>
                 <th>Duration (min)</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>start</td>
-                <td>finish</td>
-                <td>2</td>
-                <td>15</td>
-            </tr>
-            <tr>
-                <td>finish</td>
-                <td>start</td>
-                <td>6</td>
-                <td>24</td>
-            </tr>
+                {journeys}
             </tbody>
         </table>
         </div>
