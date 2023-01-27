@@ -1,15 +1,11 @@
 import '../css/ContentArea.css';
-// import Journeys from './Journeys';
+import Journeys from './Journeys';
 import Stations from './Stations';
 
-const ContentArea = () => {
-
-
+const ContentArea = (props) => {
   return (
-
     <>
-      {/* <Journeys/> */}
-      <Stations/>
+      {props.switch ?  <Journeys/> : <Stations/> }
     </>
   )
 }
