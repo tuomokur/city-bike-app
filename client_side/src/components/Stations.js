@@ -1,7 +1,10 @@
-// import {useState} from 'react';
+import {useState} from 'react';
 // import Papa from 'papaparse';
+import Modal from './Modal';
+import '../css/Stations.css';
 
 const Stations = () => {
+  const [show, setShow] = useState(false);
   // const [stations, setStations] = useState();
 
   // Papa.parse("https://opendata.arcgis.com/datasets/726277c507ef4914b0aec3cbcfcbfafc_0.csv", {
@@ -19,6 +22,7 @@ const Stations = () => {
   //   }))
   // }
   // });
+
       
   return (
     <>
@@ -33,8 +37,17 @@ const Stations = () => {
             </tr>
           </thead>
           <tbody>
-          <tr>
+          <tr className='row' onClick={setShow}>
             <td>Station 1</td>
+            <td>Station 1</td>
+            <td>Station 1</td>
+          </tr>
+          <tr onClick={setShow}>
+            <td>Station 1</td>
+            <td>Station 1</td>
+            <td>Station 1</td>
+          </tr>
+          <tr onClick={setShow}>
             <td>Station 1</td>
             <td>Station 1</td>
             <td>Station 1</td>
@@ -43,6 +56,7 @@ const Stations = () => {
           </tbody>
         </table>
       </div>
+      <Modal show={show} onClose={() => setShow(false)}/>
     </>
   )
 }
